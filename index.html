@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./src/script.js"></script>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <img src="C:\Users\bgane\Downloads\main_logo.png" alt="logo" />
+      <button id="button"style="float: right";> contact us</button>
+    </header>
+    <center>
+    <section class="container">
+      <div class="form-container">
+        <h2 class="title">Contact Us</h2>
+        <div class="form-field">
+          <form class="contact-form" id="formContainer" name="registerationform">
+            <label for="name">Name:</label>
+            <div>
+              <input
+                type="text"
+                id="nameInput"
+                name="name"
+                placeholder="Enter Full Name"
+              />
+              <div class="error" id="nameError"></div>
+            </div>
+            <label for="email">Email:</label>
+            <div>
+              <input
+                type="email"
+                id="emailInput"
+                name="email"
+                placeholder="Enter Email Address"
+              />
+              <div class="error" id="emailError"></div>
+            </div>
+            <label for="phone">Phone Number:</label>
+            <div>
+              <input
+                type="tel"
+                id="phoneInput"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Enter Mobile Number"
+              />
+              <div class="error" id="phoneError"></div>
+            </div>
+            <label for="gender">Gender:</label>
+            <div>
+              <div class="radio">
+                <label for="genderMale">
+                  <input
+                    type="radio"
+                    id="genderMale"
+                    name="genderInput"
+                    value="Male"
+                    aria-label="Select male gender"
+                    class="radio-input"
+                  />
+                  <span>Male</span>
+                </label>
+                <label for="genderFemale">
+                  <input
+                    type="radio"
+                    id="genderFemale"
+                    name="genderInput"
+                    value="Female"
+                    aria-label="Select female gender"
+                    class="radio-input"
+                  />
+                  <span>Female</span>
+                </label>
+              </div>
+              <div class="error" id="genderError"></div>
+            </div>
+
+            <div></div>
+            <div>
+              <div>
+                <label for="terms&conditions" id="tc">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="terms and conditions"
+                    value="AGREE"
+                    aria-label="Agree to T&Cs"
+                  /><span>I agree to the terms and conditions</span></label
+                >
+              </div>
+              <div class="error" id="tcError"></div>
+            </div>
+
+            <div></div>
+            <div class="form-buttons">
+              <button
+                class="btn-form"
+                type="reset"
+                onclick="return clearInputs()"
+              >
+                Cancel
+              </button>
+
+              <button class="btn-form" id="submit" type="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </center>
+    <footer class="footer">
+      <div class="table">
+        <h2 class="title" style="text-align: center;">Contacted Details</h2>
+        <div class="filters">
+          <div class="searchData">
+            <input
+              type="text"
+              placeholder="Search.."
+              name="search"
+              id="searchBar"
+            />
+            <button type="button" title="search">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <div style="float: right;">
+          <label for="genders" >Sort By Gender:</label>
+          <select name="genders" id="genders">
+            <option value="All">All</option>
+            <option value="Male" id="maleDropdown">Male</option>
+            <option value="Female" id="femaleDropdown">Female</option>
+          </div>
+          </select>
+        </div>
+        <table id="output-table">
+          <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Action</th>
+          </tr>
+        </table>
+      </div>
+    </footer>
+  </body>
+</html>
